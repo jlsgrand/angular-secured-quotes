@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --light-cornflower-blue: #8ecae6ff;
+  --blue-green: #219ebcff;
+  --blue-sapphire: #126782ff;
+  --prussian-blue: #023047ff;
+  --honey-yellow: #ffb703ff;
+  --orange-peel: #fd9e02ff;
+  --orange: #fb8500ff;
+}
+
+body {
+  margin: 0 auto;
+  width: 95%;
+
+  background-color: #f0f0f0;
+
+  font-family: monospace;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+form {
+  border: dashed 0.2rem var(--light-cornflower-blue);
+  border-radius: 0.5rem;
+
+  display: flex;
+
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-field > * {
+  margin: 0.5rem;
+}
+
+.form-field > label {
+  font-weight: bold;
+}
+
+.form-error {
+  color: darkred;
+  font-weight: bold;
+}
+
+th {
+  border: black 2px solid;
+  padding: 0.2rem;
+}
+
+td {
+  border: black 1px solid;
+  padding: 0.2rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+@media screen and (min-width: 48rem) {
+  body {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  body {
+    width: 60%;
+  }
+}

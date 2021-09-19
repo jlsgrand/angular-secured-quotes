@@ -1,0 +1,23 @@
+<form (ngSubmit)="onQuoteSave()" [formGroup]="quoteForm">
+  <div class="form-field">
+    <label for="movie">Film</label>
+    <input type="text" id="movie" formControlName="movie">
+    <div class="form-error" *ngIf="movie?.invalid && (movie?.dirty || movie?.touched)">
+      <div *ngIf="movie?.errors?.required">
+        Le film est requis
+      </div>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label for="content">Contenu de la citation</label>
+    <textarea name="content" id="content" cols="41" rows="5" formControlName="content"></textarea>
+    <div class="form-error" *ngIf="content?.invalid && (content?.dirty || content?.touched)">
+      <div *ngIf="content?.errors?.required">
+        Le contenu de la citation est requis
+      </div>
+    </div>
+  </div>
+
+  <button type="submit">Sauver la citation</button>
+</form>
